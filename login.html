@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Вход в PayFlow</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen flex items-center justify-center">
+  <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+    <div class="flex items-center mb-6">
+      <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+      <span class="text-2xl font-bold">PayFlow</span>
+    </div>
+    <h2 class="text-2xl font-semibold mb-6">Добро пожаловать</h2>
+    <form>
+      <div class="mb-4">
+        <label class="block mb-2 text-sm">Email</label>
+        <input type="email" required class="w-full p-3 border rounded-lg dark:bg-gray-700 dark:border-gray-600">
+      </div>
+      <div class="mb-6">
+        <label class="block mb-2 text-sm">Пароль</label>
+        <input type="password" required class="w-full p-3 border rounded-lg dark:bg-gray-700 dark:border-gray-600">
+      </div>
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg">
+        Войти
+      </button>
+    </form>
+    <p class="mt-4 text-center">
+      <a href="signup.html" class="text-blue-600">Нет аккаунта? Зарегистрироваться</a>
+    </p>
+  </div>
+</body>
+</html>
