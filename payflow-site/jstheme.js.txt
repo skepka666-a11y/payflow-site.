@@ -1,0 +1,21 @@
+const html = document.getElementById('html');
+const body = document.getElementById('body');
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+function toggleTheme() {
+  html.classList.toggle('dark');
+  body.classList.toggle('dark:bg-gray-900');
+  body.classList.toggle('dark:text-white');
+  localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+}
+
+// Установка темы из localStorage
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  html.classList.add('dark');
+} else {
+  html.classList.remove('dark');
+}
+
+themeToggle.addEventListener('click', toggleTheme);
+themeToggleMobile.addEventListener('click', toggleTheme);

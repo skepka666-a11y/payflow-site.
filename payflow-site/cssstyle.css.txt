@@ -1,0 +1,8 @@
+/* Темная тема */
+.dark {
+  background-color: #1a1a1a;
+  color: #e2e2e2;
+}
+.dark .dark\:text-white {
+  color: #fff;
+}

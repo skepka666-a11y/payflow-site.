@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru" id="html">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PayFlow — Принимайте платежи легко</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen transition-colors duration-300" id="body">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm dark:bg-gray-900 dark:text-white transition-colors duration-300">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+        <span class="font-bold text-xl">PayFlow</span>
+      </div>
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="#features" class="hover:text-blue-600">Возможности</a>
+        <a href="#pricing" class="hover:text-blue-600">Тарифы</a>
+        <a href="#docs" class="hover:text-blue-600">API</a>
+        <a href="app/login.html" class="font-medium text-blue-600">Войти</a>
+        <button id="theme-toggle" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+      <button class="md:hidden text-xl" onclick="toggleMenu()">☰</button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-white dark:bg-gray-900 md:hidden px-6 py-2 space-y-3">
+      <a href="#features" class="block">Возможности</a>
+      <a href="#pricing" class="block">Тарифы</a>
+      <a href="#docs" class="block">API</a>
+      <a href="app/login.html" class="block text-blue-600">Войти</a>
+      <button id="theme-toggle-mobile" class="w-full text-left p-2 rounded">Сменить тему</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-20 text-center px-6">
+    <div class="container mx-auto">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">
+        Принимайте платежи <span class="text-blue-600">за 5 минут</span>
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+        Подключите эквайринг, Apple Pay, Google Pay и криптовалюты. Без сложностей.
+      </p>
+      <div class="space-x-4">
+        <a href="app/signup.html" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium inline-block">
+          Начать бесплатно
+        </a>
+        <a href="#docs" class="border border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 px-8 py-3 rounded-lg inline-block">
+          Документация
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">Возможности</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow transition-colors duration-300">
+          <i class="fas fa-code text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2 dark:text-white">API для разработчиков</h3>
+          <p class="text-gray-600 dark:text-gray-300">Простая интеграция через REST API и SDK.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow transition-colors duration-300">
+          <i class="fas fa-mobile-alt text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2 dark:text-white">Мобильное приложение</h3>
+          <p class="text-gray-600 dark:text-gray-300">Управляйте бизнесом с телефона.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow transition-colors duration-300">
+          <i class="fas fa-shield-alt text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2 dark:text-white">Безопасность</h3>
+          <p class="text-gray-600 dark:text-gray-300">PCI DSS, 2FA, шифрование данных.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-16">
+    <div class="container mx-auto px-6 text-center max-w-md mx-auto">
+      <h2 class="text-3xl font-bold mb-12 dark:text-white">Тарифы</h2>
+      <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow transition-colors duration-300">
+        <h3 class="text-2xl font-bold dark:text-white">Старт</h3>
+        <p class="text-4xl font-bold my-4 dark:text-white">0 ₽</p>
+        <p class="text-gray-500 dark:text-gray-300">Навсегда</p>
+        <ul class="text-left my-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> До 100 платежей/мес</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Комиссия 2.5%</li>
+          <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Базовая поддержка</li>
+        </ul>
+        <a href="app/signup.html" class="block mt-6 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg">
+          Подключить
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 PayFlow. Все права защищены.</p>
+      <div class="mt-4 space-x-6">
+        <a href="#" class="hover:text-blue-400">Политика</a>
+        <a href="#" class="hover:text-blue-400">Условия</a>
+        <a href="docs/api.html" class="hover:text-blue-400">API</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Кабинет — PayFlow</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen">
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 text-white min-h-screen p-6">
+      <div class="flex items-center mb-8">
+        <i class="fas fa-bolt text-blue-400 text-2xl mr-2"></i>
+        <span class="text-xl font-bold">PayFlow</span>
+      </div>
+      <nav>
+        <a href="#" class="block py-2.5 hover:bg-gray-700 px-2 rounded">📊 Панель</a>
+        <a href="#" class="block py-2.5 hover:bg-gray-700 px-2 rounded">💳 Платежи</a>
+        <a href="#" class="block py-2.5 hover:bg-gray-700 px-2 rounded">🔧 Интеграции</a>
+        <a href="#" class="block py-2.5 hover:bg-gray-700 px-2 rounded">⚙️ Настройки</a>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 p-8">
+      <header class="flex justify-between items-center mb-8">
+        <h1 class="text-2xl font-bold">Добро пожаловать, Иван!</h1>
+        <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded">Выйти</button>
+      </header>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+          <h2 class="text-lg font-semibold">Выручка сегодня</h2>
+          <p class="text-2xl font-bold text-green-600">12 450 ₽</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+          <h2 class="text-lg font-semibold">Платежей</h2>
+          <p class="text-2xl font-bold">24</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+          <h2 class="text-lg font-semibold">Комиссия</h2>
+          <p class="text-2xl font-bold text-red-500">311 ₽</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
